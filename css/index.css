@@ -124,6 +124,9 @@ body {
     .typewriter {
         display: none;
     }
+    bodyy{
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 769px) {

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikola's Portfolio</title>
+  </head>
+  <body>
+    <div class="text-1">
+      <h1 class="term" href="#" id="term">portfolio</h1>
+    </div>
+    <div class="text-3" id="text">
+      <p class="typewriter-phone">
+        Hi, I am Nikola, a Full Stack Developer<br>
+        from Serbia, Kosjerić.
+      </p>
+      <p class="typewriter">
+        Hi, I am Nikola, a Full Stack Developer from Serbia, Kosjerić.
+      </p>
+    </div>
+    <div>
+      <p class="line">
+        --------------------------------------------------------------
+      </p>
+      <ul class="accordion">
+        <li>
+          <input type="checkbox" name="accordion" id="socialAccordion" />
+          <label for="socialAccordion">Social</label>
+          <!-- Add target="_blank" to open links in a new tab -->
+          <ul class="social-list">
+            <li>
+              <a href="https://www.tiktok.com/@2010.nix" target="_blank"
+                >TikTok</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://discordapp.com/users/933026693701062716"
+                target="_blank"
+                >Discord</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Nix402" target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a
+                href="https://stackoverflow.com/users/20875401/nikola-milic"
+                target="_blank"
+                >Stack Overflow</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" name="accordion" id="projectsAccordion" />
+          <label for="projectsAccordion">Projects</label>
+          <ul class="projects-list">
+            <li><a class="li-1" href="#">No Projects For Now.</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" name="accordion" id="infoAccordion" />
+          <label for="infoAccordion">About me</label>
+          <ul class="info-list">
+            <p id="aboutMeText">
+              Hi I am Full Stack Developer Have Worked on Many Projects Personal
+              Projects<br />as of Right Now i am Still Learning Web Development.<br />(also i
+              Hi I am Full Stack Developer Have Worked on Many Personal
+              Projects<br/>
+              as of Right Now i am Still Learning Web Development.<br />(also i
+              would like to get feedback about the portfolio)
+            </p>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <script src="js/accordion.js"></script>
+    <script>
+      initTypewriter(); // Call the typewriter initialization function
+    </script>
+  </body>
+</html>

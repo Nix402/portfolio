@@ -1,0 +1,135 @@
+body {
+    background: rgb(28, 31, 41);
+    color: #f08a5d;
+    font-family: JetBrains Mono, monospace;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+  
+  .text-1 h1 {
+    margin: 0px;
+    padding: 0px;
+    padding: 10px;
+    display: grid;
+    width: 93%;
+    height: auto;
+    font-size: 18px;
+  }
+  
+  .text-1 h1,
+  .text-3 {
+    width: max-content;
+  }
+  
+  .text-3 p {
+    padding-left: 10px;
+    margin: auto;
+    padding-left: 10px;
+  }
+  
+  .accordion {
+    margin: 0;
+    list-style: none;
+  }
+  
+  .accordion label {
+    cursor: pointer;
+  }
+  
+  .accordion input {
+    display: none;
+  }
+  
+  /* Additional styles for the accordion content (hidden by default) */
+  .accordion ul {
+    color: #f08a5d;
+    list-style: none;
+    display: none;
+  }
+  .accordion {
+    -webkit-user-select: none;
+  }
+  
+  input[type="checkbox"] + label::before {
+    content: "[+]"; /* Use a dash */
+    margin-right: 5px;
+    font-weight: normal;
+  }
+  
+  input[type="checkbox"]:checked + label::before {
+    content: "[-]"; /* Use plus sign when checked */
+    font-weight: normal; /* Remove boldness */
+  }
+  .social-list li a {
+    color: #f08a5d;
+    text-decoration: none;
+  }
+  input[type="checkbox"]:checked + label + ul {
+    display: flex;
+    flex-direction: column; /* Display items in a column */
+  } /* Existing CSS styles remain unchanged */
+  
+  .projects-list li a {
+    color: #f08a5d;
+    text-decoration: none;
+  }
+  
+  input[type="checkbox"]:checked + label + ul {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Existing CSS styles remain unchanged */
+  
+  .info-list li a {
+    color: #f08a5d;
+    text-decoration: none;
+  }
+  
+  input[type="checkbox"]:checked + label + ul {
+    display: flex;
+    flex-direction: column;
+  }
+  @keyframes blink {
+    0%,
+    50% {
+      border-color: transparent;
+    }
+    51%,
+    100% {
+      border-color: #f08a5d;
+    }
+  }
+  
+  .typewriter {
+    margin-left: 10px;
+    border-right: 1px solid #f08a5d;
+    animation: blink 1s infinite; /* Adjust the duration as needed */
+    visibility: none;
+  }
+  .line {
+    width: fit-content;
+    margin: 0;
+  }
+  .term {
+    -webkit-user-select: none;
+  }
+#aboutMeText{
+    margin: 0px;
+}
+@media screen and (max-width: 768px) {
+    .typewriter-phone {
+        display: block;
+    }
+    .typewriter {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .typewriter {
+        display: block;
+    }
+    .typewriter-phone {
+        display: none;
+    }
+}

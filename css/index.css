@@ -118,14 +118,14 @@ body {
 }
 @media screen and (max-width: 768px) {
     .typewriter-phone {
-        font-size: 13px;
+        font-size: 14px;
         display: block;
     }
     .typewriter {
         display: none;
     }
-    bodyy{
-        font-size: 12px;
+    body{
+        font-size: 14px;
     }
 }
 

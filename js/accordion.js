@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const accordions = document.querySelectorAll('.accordion input[type="checkbox"]');
     
     accordions.forEach(function (accordion) {
-        accordion.addEventListener('change', function () {
+        accordion.addEventListener('change', async function () {
             const ul = this.parentNode.querySelector('ul');
             const lineElement = this.parentNode.querySelector('.line'); // Add this line to select the line element
 
@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 ul.style.display = 'flex';
 
                 // Add the typewriter effect to the line element
-                animateText(lineElement, 100, 0);
+                await animateText(lineElement, 100, 0);
 
                 // Add the typewriter effect to each li element within the accordion
-                ul.querySelectorAll('li').forEach((li, index) => {
-                    animateText(li.querySelector('.typewriter'), 100, index * 100);
-                });
+                for (const li of ul.querySelectorAll('li')) {
+                    await animateText(li.querySelector('.typewriter'), 100, 0);
+                }
             } else {
                 ul.style.display = 'none';
             }
@@ -31,7 +31,7 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function animateText(element, speed, delay, cb) {
+async function animateText(element, speed, delay) {
     const charArray = element.innerText.split("");
     let acc = "";
     element.innerText = acc;
@@ -42,15 +42,11 @@ async function animateText(element, speed, delay, cb) {
         element.innerText = acc;
         await sleep(speed);
     }
-
-    cb && cb();
 }
 
-function init() {
-    animateText(document.querySelector("h1"), 250, function () {
-        // Callback function to start typewriter effect for the "p" element
-        animateText(document.querySelector("p"), 100, 0);
-    });
+async function init() {
+    await animateText(document.querySelector("h1"), 250);
+    await animateText(document.querySelector("p"), 100, 0);
 }
 
 init();

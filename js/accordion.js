@@ -47,9 +47,10 @@ async function animateText(element, speed, delay, cb) {
 }
 
 function init() {
-    animateText(document.querySelector("h1"), 250);
-    animateText(document.querySelector("p"), 100, 250 * 9);
-    
+    animateText(document.querySelector("h1"), 250, function () {
+        // Callback function to start typewriter effect for the "p" element
+        animateText(document.querySelector("p"), 100, 0);
+    });
 }
 
 init();

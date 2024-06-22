@@ -1,0 +1,44 @@
+body {
+    background: rgb(21, 21, 21);
+    color: #f08a5d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 80px;
+}
+
+.main {
+    background: rgb(16, 16, 16);
+    width: 800px;
+    height: 500px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling if not needed */
+}
+
+/* Hide scrollbar for WebKit-based browsers */
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for other browsers */
+.main {
+    background: linear-gradient(to top,rgb(21, 21, 21), #f08a5d );
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.mainh {
+    color:rgb(21, 21, 21) ;
+    margin-top: 0;
+    padding-left: 20px;
+}
+.othertext{
+    font-size: 40px;
+    margin: 10px;
+}
